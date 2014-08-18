@@ -22,12 +22,10 @@ test:
   #     port: 27018
   #   - host: slave2.local
   #     port: 27019
-<% if ENV['MONGOHQ_URL'] %>
-  production:
-    sessions:
-      default:
-        uri: <%= ENV['MONGOHQ_URL'] %>
-        options:
-          skip_version_check: true
-          safe: true
-<% end %>
+production:
+  sessions:
+    default:
+      uri: "mongodb://Aditya Srivastava:aditya0007@kahana.mongohq.com:10087/mongoDB"
+      options:
+        safe: true
+        skip_version_check: true
