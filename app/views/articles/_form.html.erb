@@ -24,8 +24,8 @@
     <%= f.date_select :published_on %>
   </div>
   <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
+    <%= f.label :author_id %><br />
+    <%= f.collection_select :author_id, Author.all, :id, :name %>
   </div>
   <div class="actions">
     <%= f.submit %>

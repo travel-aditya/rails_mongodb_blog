@@ -1,5 +1,11 @@
 Mongoblog::Application.routes.draw do
-  resources :articles
+  resources :authors
+
+  root :to => "articles#index" 
+  resources :articles do
+    resources :comments
+  end
+  resources :comments
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
