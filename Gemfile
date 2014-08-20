@@ -1,14 +1,17 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.3'
+ruby '1.9.3'
+gem 'rails', '3.2.6'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'heroku'
-gem 'mongoid'
-gem 'bson_ext'
+#gem 'mongoid'
+gem 'mongo'
+gem "bson_ext", ">= 1.6.2"
+gem "mongoid", ">= 2.4.10"
 group :production do
   gem 'rails_12factor'
 end

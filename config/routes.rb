@@ -1,4 +1,6 @@
 Mongoblog::Application.routes.draw do
+  resources :users
+
   resources :authors
 
   root :to => "articles#index" 
