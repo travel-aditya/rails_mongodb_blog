@@ -2,5 +2,6 @@ class Author
   include Mongoid::Document
   field :name
 #  key :name
-  #references_many :articles
+  field :_id, type: String, default: ->{ name }
+  embeds_many :articles
 end

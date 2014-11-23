@@ -15,6 +15,10 @@ gem "mongoid", ">= 2.4.10"
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'resque', :require => "resque/server"
+gem 'mail', :require => false
+gem 'redis', :require => false
 # Use unicorn as the web server
 # gem 'unicorn'
 

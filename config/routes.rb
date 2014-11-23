@@ -1,4 +1,7 @@
 Mongoblog::Application.routes.draw do
+
+  mount Resque::Server, :at => "/resque"
+
   resources :users
 
   resources :authors

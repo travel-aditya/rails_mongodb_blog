@@ -13,9 +13,9 @@
   <tr>
     <td><%= article.name %></td>
     <td><%= article.content %></td>
-    <td><%# if !article.author.blank? %>
-    <%#=  article.author.name  %>
-    <%# end %></td>
+    <td><% if !article.author.blank? %>
+    <%=  article.author.name  %>
+    <% end %></td>
     <td><%= article.published_on %></td>
     <td><%= link_to 'Show', article %></td>
     <td><%= link_to 'Edit', edit_article_path(article) %></td>
